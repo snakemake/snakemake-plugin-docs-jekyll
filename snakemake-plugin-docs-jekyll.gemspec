@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "snakemake-plugin-jekyll"
-  spec.version       = "1.0.2"
+  spec.version       = "0.0.1"
   spec.authors       = ["@vsoch"]
   spec.email         = ["vsoch@users.noreply.github.com"]
 

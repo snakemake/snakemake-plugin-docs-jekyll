@@ -10,7 +10,8 @@ plugin types:
 
 ## Usage
 
-Using the theme is easy - just add it as a `remote_theme` to your config yaml.
+Using the [theme](https://rubygems.org/gems/snakemake-plugin-jekyll) is easy - 
+just add it as a `remote_theme` to your config yaml. 
 We will be providing an example site (to use as a template) soon!
 
 ```bash

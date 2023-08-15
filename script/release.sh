@@ -13,7 +13,7 @@ bundle update
 
 # Build a new gem archive.
 
-rm -rf snakemake-plugin-docs-jekyll-*.gem
+rm -rf snakemake-plugin-jekyll-*.gem
 gem build -q snakemake-plugin-docs-jekyll.gemspec
 
 # Make sure we're on the main branch.
@@ -25,7 +25,7 @@ gem build -q snakemake-plugin-docs-jekyll.gemspec
 
 # Figure out what version we're releasing.
 
-tag=v`ls snakemake-plugin-docs-jekyll-*.gem | sed 's/^snakemake-plugin-docs-jekyll-\(.*\)\.gem$/\1/'`
+tag=v`ls snakemake-plugin-jekyll-*.gem | sed 's/^snakemake-plugin-jekyll-\(.*\)\.gem$/\1/'`
 
 # Make sure we haven't released this version before.
 
@@ -38,5 +38,5 @@ git fetch -t origin
 
 # Tag it and bag it.
 
-gem push snakemake-plugin-docs-jekyll-*.gem && git tag "$tag" &&
+gem push snakemake-plugin-jekyll-*.gem && git tag "$tag" &&
   git push origin main && git push origin "$tag"
