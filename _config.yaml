@@ -1,0 +1,24 @@
+title: Snakemake Plugin Docs Jekyll
+
+nav_logo_file: assets/img/snakemake-logo.png
+footer_logo_file: assets/img/snakemake-logo.png
+
+permalink: pretty
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+
+github_link: true
+github_pages_branch: main
+
+exclude:
+ - _assets
+ - Gemfile
+ - Gemfile.lock
+ - vendor
+ - test
+ - .github
