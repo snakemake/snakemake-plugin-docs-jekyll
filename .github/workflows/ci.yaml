@@ -1,0 +1,18 @@
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build Jekyll Theme
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+      - name: Bootstrap
+        run: script/bootstrap.sh
+      - name: Build
+        run: script/build.sh
