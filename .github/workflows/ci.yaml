@@ -1,0 +1,19 @@
+name: snakemake theme test build
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build Jekyll Theme
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
+      - name: Bootstrap
+        run: script/bootstrap.sh
+      - name: Build
+        run: script/build.sh

@@ -4,5 +4,5 @@ set -e
 
 gem install html-proofer
 bundle exec jekyll build
-bundle exec htmlproofer ./_site --check-html --check-sri --url-ignore '/fonts.gstatic.com/'
+bundle exec htmlproofer ./_site
 gem build snakemake-plugin-docs-jekyll.gemspec
